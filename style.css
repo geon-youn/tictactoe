@@ -1,0 +1,59 @@
+html,
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 5vmax);
+    grid-template-rows: repeat(3, 5vmax);
+    justify-content: center;
+}
+
+#board > div {
+    background-color: lightblue;
+    outline: 2px solid lightcyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#board > div:hover {
+    background-color: rgb(185, 218, 230);
+    outline: 2px outset rgb(120, 171, 189);
+    z-index: 1;
+}
+
+#board > div:active {
+    outline: 2px inset rgb(120, 171, 189);
+}
+
+#board .filled:hover,
+#board .filled:active {
+    background-color: lightblue;
+    outline: 2px solid lightcyan;
+    z-index: inherit;
+}
+
+#board .disable,
+#board .disable:hover {
+    background-color: lightgray;
+    outline: 2px solid gray;
+    z-index: inherit;
+}
